@@ -1306,7 +1306,7 @@ def arrayToQPath(x, y, connect='all'):
 
     # decide which points are connected by lines
     if connect == 'pairs':
-        connect = np.empty((n/2,2), dtype=np.int32)
+        connect = np.empty((n // 2, 2), dtype=np.int32)
         if connect.size != n:
             raise Exception("x,y array lengths must be multiple of 2 to use connect='pairs'")
         connect[:,0] = 1
